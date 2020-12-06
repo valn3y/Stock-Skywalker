@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363636"
+    tools:context=".Home.SignupLocalActivity">
+
+    <EditText
+        android:id="@+id/signupAddress"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:hint="Endereço"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signupWidth"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:hint="Comprimento (m)"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupAddress" />
+
+    <EditText
+        android:id="@+id/signupHeight"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:hint="Largura (m)"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupWidth" />
+
+    <EditText
+        android:id="@+id/signupDepth"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:hint="Profundidade (m)"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupHeight" />
+
+    <RadioGroup
+        android:id="@+id/groupCategory"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupDepth">
+
+        <RadioButton
+            android:id="@+id/radioConteiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contêiner"
+            android:checked="true"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioGalpao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Galpão"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioQuarto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarto"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioGuardaVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guarda-Volume"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/signupPrice"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:hint="Preço (R$)"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/groupCategory"
+        app:layout_constraintTop_toBottomOf="@+id/signupDepth" />
+
+    <Button
+        android:id="@+id/buttonUpdateLocal"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:text="Cadastrar"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupCategory" />
+
+    <Button
+        android:id="@+id/buttonDeleteLocal"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:text="EXCLUIR"
+        android:textColor="#dc4a46"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpdateLocal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
